@@ -1,0 +1,60 @@
+[
+  {
+    "id": "skateboard-magazine-capstone-2026-07-25",
+    "repository": "skateboard-magazine-capstone",
+    "repositoryUrl": "https://github.com/TVW96/skateboard-magazine-capstone",
+    "date": "2026-07-25",
+    "month": "2026-07",
+    "commitSummary": "Palette tokens, light/dark mode toggle, and editorial heading refinements",
+    "archetype": "Editorial magazine",
+    "palette": ["#121015", "#F6F0E2", "#D7252E", "#8E2DE2"],
+    "image": "assets/2026-07-25/push-editorial.jpg",
+    "format": "JPG",
+    "dimensions": "2304 × 1792",
+    "assetType": "Campaign scene"
+  },
+  {
+    "id": "ai-copiloted-typographic-card-2026-07-25",
+    "repository": "ai-copiloted-typographic-card",
+    "repositoryUrl": "https://github.com/TVW96/ai-copiloted-typographic-card",
+    "date": "2026-07-25",
+    "month": "2026-07",
+    "commitSummary": "Fluid typography, perceptual color, accessibility, and article-card audit",
+    "archetype": "Editorial component",
+    "palette": ["#121015", "#F6F0E2", "#FF2424", "#B000FF"],
+    "image": "assets/2026-07-25/push-logo.png",
+    "format": "PNG",
+    "dimensions": "2048 × 2048",
+    "assetType": "Transparent mark",
+    "transparent": true
+  },
+  {
+    "id": "fluid-typographic-engine-magazine-article-scene-2026-07-24",
+    "repository": "fluid-typographic-engine-magazine-article",
+    "repositoryUrl": "https://github.com/TVW96/fluid-typographic-engine-magazine-article",
+    "date": "2026-07-24",
+    "month": "2026-07",
+    "commitSummary": "Fluid clamp() type scales, a 70ch reading measure, text-box trimming, and an audited responsive magazine article",
+    "archetype": "Magazine article",
+    "palette": ["#222834", "#F8F3E8", "#B95143", "#768791"],
+    "image": "assets/2026-07-24/fluid-typographic-engine-magazine-article/fluid-layout-editorial.jpg",
+    "format": "JPG",
+    "dimensions": "2304 × 1792",
+    "assetType": "Fluid layout campaign scene"
+  },
+  {
+    "id": "fluid-typographic-engine-magazine-article-mark-2026-07-24",
+    "repository": "fluid-typographic-engine-magazine-article",
+    "repositoryUrl": "https://github.com/TVW96/fluid-typographic-engine-magazine-article",
+    "date": "2026-07-24",
+    "month": "2026-07",
+    "commitSummary": "Fluid clamp() type scales, a 70ch reading measure, text-box trimming, and an audited responsive magazine article",
+    "archetype": "Magazine article",
+    "palette": ["#222834", "#F8F3E8", "#B95143", "#768791"],
+    "image": "assets/2026-07-24/fluid-typographic-engine-magazine-article/fluid-layout-mark.png",
+    "format": "PNG",
+    "dimensions": "2048 × 2048",
+    "assetType": "Transparent responsive-frame mark",
+    "transparent": true
+  }
+]

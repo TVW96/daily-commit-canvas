@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="A daily visual archive generated from GitHub repository activity and design signals."
+    >
+    <meta property="og:title" content="Commit Canvas">
+    <meta property="og:description" content="Every push leaves a visual trace.">
+    <meta property="og:image" content="og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Commit Canvas — Daily Creative Archive</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body id="top">
+    <header class="masthead">
+      <a class="brand" href="#archive" aria-label="Commit Canvas archive">
+        COMMIT<span>CANVAS</span>
+      </a>
+      <p>Daily repository signals, translated into visual assets.</p>
+      <a class="github-link" href="https://github.com/TVW96" target="_blank" rel="noreferrer">
+        TVW96 ↗
+      </a>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <p class="eyebrow">Automated visual archive / Seattle, WA</p>
+          <h1 id="hero-title">
+            Every push leaves
+            <br>
+            <em>a visual trace.</em>
+          </h1>
+        </div>
+        <div class="hero-meta">
+          <p>
+            Each morning, recent GitHub work becomes a repository-specific logo
+            and an expressive editorial image shaped by its subject, archetype,
+            colors, design tokens, and current design research.
+          </p>
+          <div class="schedule">
+            <span>Next run</span>
+            <strong>04:45 AM</strong>
+            <small>Seattle / Pacific time</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="signal-strip" aria-label="Archive summary">
+        <div>
+          <span>Latest signal</span>
+          <strong id="latest-date">—</strong>
+        </div>
+        <div>
+          <span>Repositories indexed</span>
+          <strong id="repository-count">00</strong>
+        </div>
+        <div>
+          <span>Assets on view</span>
+          <strong id="asset-count">00</strong>
+        </div>
+        <div class="status">
+          <span class="status-dot" aria-hidden="true"></span>
+          Daily generation active
+        </div>
+      </section>
+
+      <section class="archive" id="archive" aria-labelledby="archive-title">
+        <div class="archive-heading">
+          <div>
+            <p class="eyebrow">The archive</p>
+            <h2 id="archive-title">Generated assets</h2>
+          </div>
+          <form class="filters">
+            <label>
+              <span>Exact date</span>
+              <input id="date-filter" type="date">
+            </label>
+            <label>
+              <span>Month</span>
+              <input id="month-filter" type="month">
+            </label>
+            <button id="clear-filters" type="button" disabled>Clear</button>
+          </form>
+        </div>
+
+        <p class="result-count" id="result-count" role="status">Loading assets…</p>
+        <div class="gallery-grid" id="gallery"></div>
+
+        <div class="empty-state" id="empty-state" hidden>
+          <p>No visual traces match those filters.</p>
+          <button type="button" id="show-all">Show the full archive</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Commit Canvas</p>
+      <p>GitHub signals × Adobe Firefly</p>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+  </body>
+</html>
