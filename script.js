@@ -68,7 +68,12 @@ function createCard(entry, index) {
   peek.className = "card-peek";
   appendTextElement(peek, "span", displayDate(entry.date), "peek-date");
   appendTextElement(peek, "strong", entry.repository);
-  appendTextElement(peek, "span", entry.assetType, "peek-type");
+  appendTextElement(
+    peek,
+    "span",
+    `${entry.assetType} · ${entry.versionLabel || "v01"}`,
+    "peek-type",
+  );
 
   card.append(visual, peek);
   return card;
@@ -104,6 +109,7 @@ function openModal(entry) {
   facts.className = "modal-facts";
   addModalField(facts, "Commit signal", entry.commitSummary);
   addModalField(facts, "Archetype", entry.archetype);
+  addModalField(facts, "Revision", entry.versionLabel || `v${String(entry.revision || 1).padStart(2, "0")}`);
   addModalField(facts, "Asset", entry.assetType);
   addModalField(facts, "Dimensions", entry.dimensions);
   addModalField(facts, "Creative rationale", entry.creativeRationale);

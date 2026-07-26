@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Commit Canvas generation manifest",
+  "type": "object",
+  "required": [
+    "runId",
+    "activityDate",
+    "mode",
+    "repositoryCount",
+    "expectedAssetCount",
+    "repositories"
+  ],
+  "properties": {
+    "runId": {"type": "string"},
+    "activityDate": {"type": "string", "format": "date"},
+    "mode": {"enum": ["activity", "fallback"]},
+    "repositoryCount": {"type": "integer", "minimum": 1},
+    "expectedAssetCount": {"type": "integer", "minimum": 2},
+    "repositories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "githubRepositoryNodeId",
+          "repository",
+          "activityDate",
+          "commitSetHash",
+          "revision",
+          "assets"
+        ],
+        "properties": {
+          "githubRepositoryNodeId": {"type": "string"},
+          "repository": {"type": "string"},
+          "activityDate": {"type": "string", "format": "date"},
+          "commitSetHash": {"type": "string"},
+          "revision": {"type": "integer", "minimum": 1},
+          "parentRevisionEntryIds": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "assets": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "type": "object",
+              "required": ["role", "path", "status", "attempts", "validation"],
+              "properties": {
+                "role": {"enum": ["transparent-logo-png", "environmental-scene-jpg"]},
+                "path": {"type": "string"},
+                "status": {
+                  "enum": ["pending", "generating", "generated", "validated", "published", "failed"]
+                },
+                "attempts": {"type": "integer", "minimum": 0},
+                "error": {"type": ["string", "null"]},
+                "validation": {
+                  "type": "object",
+                  "required": [
+                    "format",
+                    "dimensions",
+                    "alphaCoverage",
+                    "brokenLinks",
+                    "promptCompliance",
+                    "duplicateDetection"
+                  ],
+                  "properties": {
+                    "format": {"enum": ["pending", "passed", "failed"]},
+                    "dimensions": {"enum": ["pending", "passed", "failed"]},
+                    "alphaCoverage": {"enum": ["pending", "passed", "failed", "not-applicable"]},
+                    "brokenLinks": {"enum": ["pending", "passed", "failed"]},
+                    "promptCompliance": {"enum": ["pending", "passed", "failed"]},
+                    "duplicateDetection": {"enum": ["pending", "passed", "failed", "not-applicable"]}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

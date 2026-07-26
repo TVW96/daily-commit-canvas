@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "policy": "Exclude by immutable GitHub repository node ID. Names are descriptive only and must not be the primary match key.",
+  "repositories": [
+    {
+      "githubNodeId": "R_kgDOTkUJIg",
+      "owner": "TVW96",
+      "name": "daily-commit-canvas",
+      "url": "https://github.com/TVW96/daily-commit-canvas",
+      "reason": "Stores and publishes the Commit Canvas archive."
+    }
+  ]
+}

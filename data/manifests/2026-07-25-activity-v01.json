@@ -1,0 +1,98 @@
+{
+  "runId": "2026-07-25-activity-v01",
+  "activityDate": "2026-07-25",
+  "mode": "activity",
+  "repositoryCount": 2,
+  "expectedAssetCount": 4,
+  "actualAssetCount": 4,
+  "status": "published",
+  "note": "Retroactively recorded after the first multi-repository run. Existing unversioned filenames are preserved; all future files use explicit vNN suffixes.",
+  "repositories": [
+    {
+      "githubRepositoryNodeId": "R_kgDOTi67VQ",
+      "repository": "TVW96/fluid-typographic-engine-magazine-article",
+      "activityDate": "2026-07-25",
+      "commitShas": ["205ab5ca3f5f0fe39b1ab30fe04d970884a603fb"],
+      "commitSetHash": "git:205ab5ca3f5f0fe39b1ab30fe04d970884a603fb",
+      "revision": 1,
+      "parentRevisionEntryIds": [],
+      "assets": [
+        {
+          "role": "transparent-logo-png",
+          "path": "assets/2026-07-25/fluid-typographic-engine-magazine-article/fluid-responsive-mark.png",
+          "versionLabel": "v01",
+          "status": "published",
+          "attempts": 1,
+          "error": null,
+          "validation": {
+            "format": "passed",
+            "dimensions": "passed",
+            "alphaCoverage": "passed",
+            "brokenLinks": "passed",
+            "promptCompliance": "passed",
+            "duplicateDetection": "passed"
+          }
+        },
+        {
+          "role": "environmental-scene-jpg",
+          "path": "assets/2026-07-25/fluid-typographic-engine-magazine-article/fluid-editorial-scene.jpg",
+          "versionLabel": "v01",
+          "status": "published",
+          "attempts": 1,
+          "error": null,
+          "validation": {
+            "format": "passed",
+            "dimensions": "passed",
+            "alphaCoverage": "not-applicable",
+            "brokenLinks": "passed",
+            "promptCompliance": "passed",
+            "duplicateDetection": "passed"
+          }
+        }
+      ]
+    },
+    {
+      "githubRepositoryNodeId": "R_kgDOTjpVWw",
+      "repository": "TVW96/mangamarketplace-html",
+      "activityDate": "2026-07-25",
+      "commitShas": ["4734372c2d99afe69c1f66082a337f9981e149d1"],
+      "commitSetHash": "git:4734372c2d99afe69c1f66082a337f9981e149d1",
+      "revision": 1,
+      "parentRevisionEntryIds": [],
+      "assets": [
+        {
+          "role": "transparent-logo-png",
+          "path": "assets/2026-07-25/mangamarketplace-html/inkline-market-mark.png",
+          "versionLabel": "v01",
+          "status": "published",
+          "attempts": 1,
+          "error": null,
+          "validation": {
+            "format": "passed",
+            "dimensions": "passed",
+            "alphaCoverage": "passed",
+            "brokenLinks": "passed",
+            "promptCompliance": "passed",
+            "duplicateDetection": "passed"
+          }
+        },
+        {
+          "role": "environmental-scene-jpg",
+          "path": "assets/2026-07-25/mangamarketplace-html/inkline-market-scene.jpg",
+          "versionLabel": "v01",
+          "status": "published",
+          "attempts": 1,
+          "error": null,
+          "validation": {
+            "format": "passed",
+            "dimensions": "passed",
+            "alphaCoverage": "not-applicable",
+            "brokenLinks": "passed",
+            "promptCompliance": "passed",
+            "duplicateDetection": "passed"
+          }
+        }
+      ]
+    }
+  ]
+}

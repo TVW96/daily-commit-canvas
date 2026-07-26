@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "timezone": "America/Los_Angeles",
+  "schedule": "04:45",
+  "assetsPerRepositoryRevision": 2,
+  "roles": ["transparent-logo-png", "environmental-scene-jpg"],
+  "manifestRequiredBeforeGeneration": true,
+  "resumable": true,
+  "preserveCompletedAssetsOnFailure": true,
+  "retryOnlyMissingOrFailedAssets": true,
+  "archivePolicy": "append-only",
+  "revisionPolicy": {
+    "identity": "githubRepositoryNodeId + activityDate + commitSetHash",
+    "lateCommitBehavior": "create-linked-revision",
+    "preservePriorImages": true,
+    "entryVersionField": "revision",
+    "filenamePattern": "{repository-slug}-{asset-role}-v{NN}.{ext}",
+    "firstVersion": "01"
+  },
+  "duplicateDetection": {
+    "requiredForFallback": true,
+    "compareAgainstAllPriorRepositoryImages": true,
+    "methods": [
+      "side-by-side-agent-visual-review",
+      "composition-subject-palette-ratio-comparison"
+    ],
+    "nearCopyAction": "reject-and-regenerate",
+    "recordResultInManifest": true
+  },
+  "validation": {
+    "requiredBeforePublishing": true,
+    "recordPerAsset": true,
+    "checks": [
+      "file-signature-and-format",
+      "pixel-dimensions",
+      "alpha-channel-and-coverage",
+      "transparent-corners-for-logo",
+      "broken-local-and-deployed-links",
+      "prompt-compliance",
+      "visual-quality",
+      "duplicate-detection"
+    ]
+  },
+  "exclusionRegistry": "config/repository-exclusions.json",
+  "deletionRequiresTwoStepConfirmation": true
+}

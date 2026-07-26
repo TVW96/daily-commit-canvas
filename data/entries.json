@@ -1,6 +1,8 @@
 [
   {
     "id": "mangamarketplace-html-scene-2026-07-25",
+    "revision": 1,
+    "versionLabel": "v01",
     "repository": "mangamarketplace-html",
     "repositoryUrl": "https://github.com/TVW96/mangamarketplace-html",
     "date": "2026-07-25",
@@ -24,6 +26,8 @@
   },
   {
     "id": "mangamarketplace-html-mark-2026-07-25",
+    "revision": 1,
+    "versionLabel": "v01",
     "repository": "mangamarketplace-html",
     "repositoryUrl": "https://github.com/TVW96/mangamarketplace-html",
     "date": "2026-07-25",
@@ -48,6 +52,8 @@
   },
   {
     "id": "fluid-typographic-engine-magazine-article-scene-2026-07-25",
+    "revision": 1,
+    "versionLabel": "v01",
     "repository": "fluid-typographic-engine-magazine-article",
     "repositoryUrl": "https://github.com/TVW96/fluid-typographic-engine-magazine-article",
     "date": "2026-07-25",
@@ -71,6 +77,8 @@
   },
   {
     "id": "fluid-typographic-engine-magazine-article-mark-2026-07-25",
+    "revision": 1,
+    "versionLabel": "v01",
     "repository": "fluid-typographic-engine-magazine-article",
     "repositoryUrl": "https://github.com/TVW96/fluid-typographic-engine-magazine-article",
     "date": "2026-07-25",
@@ -95,6 +103,8 @@
   },
   {
     "id": "skateboard-magazine-capstone-2026-07-25",
+    "revision": 1,
+    "versionLabel": "v01",
     "repository": "skateboard-magazine-capstone",
     "repositoryUrl": "https://github.com/TVW96/skateboard-magazine-capstone",
     "date": "2026-07-25",
@@ -118,6 +128,8 @@
   },
   {
     "id": "ai-copiloted-typographic-card-2026-07-25",
+    "revision": 1,
+    "versionLabel": "v01",
     "repository": "ai-copiloted-typographic-card",
     "repositoryUrl": "https://github.com/TVW96/ai-copiloted-typographic-card",
     "date": "2026-07-25",
@@ -142,6 +154,8 @@
   },
   {
     "id": "fluid-typographic-engine-magazine-article-scene-2026-07-24",
+    "revision": 1,
+    "versionLabel": "v01",
     "repository": "fluid-typographic-engine-magazine-article",
     "repositoryUrl": "https://github.com/TVW96/fluid-typographic-engine-magazine-article",
     "date": "2026-07-24",
@@ -165,6 +179,8 @@
   },
   {
     "id": "fluid-typographic-engine-magazine-article-mark-2026-07-24",
+    "revision": 1,
+    "versionLabel": "v01",
     "repository": "fluid-typographic-engine-magazine-article",
     "repositoryUrl": "https://github.com/TVW96/fluid-typographic-engine-magazine-article",
     "date": "2026-07-24",
