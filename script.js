@@ -5,6 +5,9 @@ const clearFilters = document.querySelector("#clear-filters");
 const showAll = document.querySelector("#show-all");
 const emptyState = document.querySelector("#empty-state");
 const resultCount = document.querySelector("#result-count");
+const modal = document.querySelector("#asset-modal");
+const modalContent = document.querySelector("#modal-content");
+const modalClose = document.querySelector("#modal-close");
 
 let entries = [];
 
@@ -33,8 +36,11 @@ function createDefinition(list, term, description) {
 }
 
 function createCard(entry, index) {
-  const card = document.createElement("article");
+  const card = document.createElement("button");
+  card.type = "button";
   card.className = "asset-card";
+  card.setAttribute("aria-label", `Open details for ${entry.assetType} from ${entry.repository}`);
+  card.addEventListener("click", () => openModal(entry));
 
   const visual = document.createElement("div");
   visual.className = `asset-visual${entry.transparent ? " transparent" : ""}`;
@@ -46,53 +52,92 @@ function createCard(entry, index) {
   visual.append(image);
   appendTextElement(visual, "span", String(index + 1).padStart(2, "0"), "asset-number");
 
-  const info = document.createElement("div");
-  info.className = "asset-info";
+  const peek = document.createElement("div");
+  peek.className = "card-peek";
+  appendTextElement(peek, "span", displayDate(entry.date), "peek-date");
+  appendTextElement(peek, "strong", entry.repository);
+  appendTextElement(peek, "span", entry.assetType, "peek-type");
 
-  const dateRow = document.createElement("div");
-  dateRow.className = "asset-date";
-  const time = appendTextElement(dateRow, "time", displayDate(entry.date));
-  time.dateTime = entry.date;
-  appendTextElement(dateRow, "span", entry.format, "asset-format");
+  card.append(visual, peek);
+  return card;
+}
 
-  const heading = document.createElement("h3");
+function addModalField(parent, label, value) {
+  const group = document.createElement("div");
+  group.className = "modal-field";
+  appendTextElement(group, "dt", label);
+  appendTextElement(group, "dd", value || "Not recorded");
+  parent.append(group);
+}
+
+function openModal(entry) {
+  const layout = document.createElement("div");
+  layout.className = "modal-layout";
+
+  const visual = document.createElement("div");
+  visual.className = `modal-visual${entry.transparent ? " transparent" : ""}`;
+  const image = document.createElement("img");
+  image.src = entry.image;
+  image.alt = `${entry.assetType} for ${entry.repository}`;
+  visual.append(image);
+
+  const details = document.createElement("div");
+  details.className = "modal-details";
+  appendTextElement(details, "p", `${displayDate(entry.date)} · ${entry.format}`, "eyebrow");
+  const title = appendTextElement(details, "h2", entry.repository);
+  title.id = "modal-title";
+  appendTextElement(details, "p", entry.fullDescription || entry.commitSummary, "modal-description");
+
+  const facts = document.createElement("dl");
+  facts.className = "modal-facts";
+  addModalField(facts, "Commit signal", entry.commitSummary);
+  addModalField(facts, "Archetype", entry.archetype);
+  addModalField(facts, "Asset", entry.assetType);
+  addModalField(facts, "Dimensions", entry.dimensions);
+  addModalField(facts, "Creative rationale", entry.creativeRationale);
+  addModalField(facts, "Generation method", entry.generationMethod);
+  addModalField(facts, "Agent / LLM", entry.agentModel);
+  addModalField(facts, "Image model", entry.imageModel);
+
+  const promptHeading = appendTextElement(details, "h3", "Firefly prompt");
+  promptHeading.className = "modal-section-title";
+  appendTextElement(details, "pre", entry.fireflyPrompt || "The exact prompt was not captured in the original generation record.", "prompt");
+
+  const citationHeading = appendTextElement(details, "h3", "Research citations");
+  citationHeading.className = "modal-section-title";
+  const citations = document.createElement("ul");
+  citations.className = "citations";
+  const sources = entry.researchCitations?.length
+    ? entry.researchCitations
+    : [{ label: "No external research used; generation was grounded in repository source.", url: entry.repositoryUrl }];
+  sources.forEach((source) => {
+    const item = document.createElement("li");
+    const link = document.createElement("a");
+    link.href = source.url;
+    link.target = "_blank";
+    link.rel = "noreferrer";
+    link.textContent = `${source.label} ↗`;
+    item.append(link);
+    citations.append(item);
+  });
+
+  const actions = document.createElement("div");
+  actions.className = "modal-actions";
   const repositoryLink = document.createElement("a");
   repositoryLink.href = entry.repositoryUrl;
   repositoryLink.target = "_blank";
   repositoryLink.rel = "noreferrer";
-  repositoryLink.textContent = `${entry.repository} ↗`;
-  heading.append(repositoryLink);
-
-  appendTextElement(info, "p", entry.commitSummary, "asset-summary");
-  const summary = info.lastElementChild;
-
-  const details = document.createElement("dl");
-  createDefinition(details, "Archetype", entry.archetype);
-  createDefinition(details, "Asset", entry.assetType);
-  createDefinition(details, "Size", entry.dimensions);
-
-  const cardFooter = document.createElement("div");
-  cardFooter.className = "card-footer";
-  const palette = document.createElement("div");
-  palette.className = "palette";
-  palette.setAttribute("aria-label", "Color palette");
-  entry.palette.forEach((color) => {
-    const swatch = document.createElement("span");
-    swatch.style.backgroundColor = color;
-    swatch.title = color;
-    palette.append(swatch);
-  });
-
+  repositoryLink.textContent = "View repository ↗";
   const download = document.createElement("a");
-  download.className = "download";
   download.href = entry.image;
   download.download = "";
   download.textContent = `Download ${entry.format} ↓`;
+  actions.append(repositoryLink, download);
 
-  cardFooter.append(palette, download);
-  info.replaceChildren(dateRow, heading, summary, details, cardFooter);
-  card.append(visual, info);
-  return card;
+  details.append(facts, promptHeading, details.querySelector(".prompt"), citationHeading, citations, actions);
+  layout.append(visual, details);
+  modalContent.replaceChildren(layout);
+  modal.showModal();
 }
 
 function resetFilters() {
@@ -145,6 +190,10 @@ dateFilter.addEventListener("input", render);
 monthFilter.addEventListener("input", render);
 clearFilters.addEventListener("click", resetFilters);
 showAll.addEventListener("click", resetFilters);
+modalClose.addEventListener("click", () => modal.close());
+modal.addEventListener("click", (event) => {
+  if (event.target === modal) modal.close();
+});
 
 initialize().catch((error) => {
   resultCount.textContent = error.message;

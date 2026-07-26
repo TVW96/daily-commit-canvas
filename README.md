@@ -18,6 +18,20 @@ the previous images.
 The archive runs at **4:45 AM Pacific time** and treats **Seattle, Washington**
 as the local reporting context.
 
+## Preservation policy
+
+Generated images and their archive entries are append-only. A later run may add
+metadata, correct attribution, or add a revision, but it must never remove,
+replace, overwrite, hide, or unpublish an existing image unless the user
+specifically requests deletion.
+
+Deletion always requires a separate confirmation step. After receiving a
+deletion request, the task must first present an exact deletion manifest with
+the repository, activity date, entry ID, asset path, format, and deployment
+locations for every affected image. It must then ask the user to confirm those
+specific targets in a subsequent message. Silence, an earlier general request,
+or an ambiguous confirmation is not authorization to delete anything.
+
 ## GitHub Pages
 
 The deployment workflow publishes the static site from the `main` branch using

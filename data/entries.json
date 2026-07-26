@@ -11,7 +11,16 @@
     "image": "assets/2026-07-25/mangamarketplace-html/inkline-market-scene.jpg",
     "format": "JPG",
     "dimensions": "2304 × 1792",
-    "assetType": "After-hours collector marketplace scene"
+    "assetType": "After-hours collector marketplace scene",
+    "fullDescription": "A cinematic editorial-commerce scene translating Inkline Market's manga catalogue, collector ledger, archival editions, and light/dark OKLCH system into an after-hours bookshop environment.",
+    "creativeRationale": "The scene treats collectable manga as an archival design object rather than generic merchandise. Vermilion creates acquisition urgency, signal blue establishes the nocturnal editorial mood, and ledger forms connect the image to the marketplace interface.",
+    "generationMethod": "Adobe Firefly text-to-image generation at 2304 × 1792, exported directly as JPEG.",
+    "agentModel": "OpenAI GPT-5 (Codex)",
+    "imageModel": "Adobe Firefly; connector model version not exposed",
+    "fireflyPrompt": "Create a cinematic editorial-commerce campaign image for Inkline Market, an independent manga and rare-edition webstore. A collector's reading table in a compact after-hours bookshop displays several original unbranded manga volumes, a duotone vermilion-and-carbon cover, archival sleeves, edition cards, and a visual market ledger made from clean ruled blocks without readable text. Blend contemporary Japanese editorial design, risograph texture, premium product photography, and a neon-noir signal-blue atmosphere while keeping the products clear and shoppable. Palette: warm paper, carbon black, vermilion, signal blue, restrained golden yellow. Strong 4:3 composition, layered depth, tactile print materials, no people, no copyrighted characters, no brands, no legible words.",
+    "researchCitations": [
+      {"label": "mangamarketplace-html repository source", "url": "https://github.com/TVW96/mangamarketplace-html"}
+    ]
   },
   {
     "id": "mangamarketplace-html-mark-2026-07-25",
@@ -26,7 +35,16 @@
     "format": "PNG",
     "dimensions": "2048 × 2048",
     "assetType": "Transparent panel-and-edition mark",
-    "transparent": true
+    "transparent": true,
+    "fullDescription": "A compact geometric mark combining manga-panel framing, a book edge, edition-tag geometry, and an ink registration dot for the Inkline Market identity.",
+    "creativeRationale": "The mark reduces the marketplace's editorial and commerce cues to a reproducible symbol. The enclosing panel provides structure, the angular diagonal suggests a turning page and exchange, and the registration dot references print production.",
+    "generationMethod": "Adobe Firefly text-to-image generation at 2048 × 2048, followed by Adobe background removal and PNG export with alpha.",
+    "agentModel": "OpenAI GPT-5 (Codex)",
+    "imageModel": "Adobe Firefly; connector model version not exposed",
+    "fireflyPrompt": "Create a vector-friendly abstract logo mark for Inkline Market, an editorial marketplace for independent manga and rare collector editions. Merge a manga panel frame, the angled fore-edge of a book, a subtle price-tag notch, and an ink registration dot into one bold geometric emblem. Flat solid fills only, crisp clean edges, centered, generous padding, no words, no letters, no numbers. Palette: carbon ink #20242B, vermilion #B43B2D, signal blue #2E667A, golden paper highlight #E5C85A. Place the isolated mark on a perfectly plain white background with no shadow, no gradient, no texture, no floor, no border.",
+    "researchCitations": [
+      {"label": "mangamarketplace-html repository source", "url": "https://github.com/TVW96/mangamarketplace-html"}
+    ]
   },
   {
     "id": "fluid-typographic-engine-magazine-article-scene-2026-07-25",
@@ -40,7 +58,16 @@
     "image": "assets/2026-07-25/fluid-typographic-engine-magazine-article/fluid-editorial-scene.jpg",
     "format": "JPG",
     "dimensions": "2304 × 1792",
-    "assetType": "Responsive editorial system scene"
+    "assetType": "Responsive editorial system scene",
+    "fullDescription": "A tactile editorial still life translating fluid type scales, nested responsive frames, measured reading width, modular spacing, and a terracotta drop-cap into a physical magazine system.",
+    "creativeRationale": "The open publication makes responsive behavior tangible: nested frames represent viewport adaptation, progressively scaled forms suggest clamp-based typography, and the restrained material palette mirrors the source design tokens.",
+    "generationMethod": "Adobe Firefly text-to-image generation at 2304 × 1792, exported directly as JPEG.",
+    "agentModel": "OpenAI GPT-5 (Codex)",
+    "imageModel": "Adobe Firefly; connector model version not exposed",
+    "fireflyPrompt": "Create a refined editorial campaign image for a fluid typographic engine magazine article. A sculptural reading table holds an open high-design magazine whose typographic columns visibly progress from compact to expansive across nested responsive frames; large serif display forms, measured 70-character columns, a terracotta drop-cap motif, modular spacing markers, and subtle CSS-like rhythm represented visually without readable code. Quiet tactile paper, graphite ink, terracotta, muted slate, warm off-white. Contemporary art-direction photography blended with precise editorial collage, accessible clarity, generous negative space, sophisticated Seattle design-studio mood. No brands and no legible words.",
+    "researchCitations": [
+      {"label": "fluid typographic engine repository source", "url": "https://github.com/TVW96/fluid-typographic-engine-magazine-article"}
+    ]
   },
   {
     "id": "fluid-typographic-engine-magazine-article-mark-2026-07-25",
@@ -55,7 +82,63 @@
     "format": "PNG",
     "dimensions": "2048 × 2048",
     "assetType": "Transparent responsive-page mark",
-    "transparent": true
+    "transparent": true,
+    "fullDescription": "A responsive-page emblem combining an open publication, an expanding viewport frame, and scaled editorial bars into a single transparent mark.",
+    "creativeRationale": "The mark expresses fluid typography without relying on code or lettering. The open-book silhouette establishes the magazine archetype while the nested frame and stepped rules communicate continuous responsive scaling.",
+    "generationMethod": "Adobe Firefly text-to-image generation at 2048 × 2048, followed by Adobe background removal and PNG export with alpha.",
+    "agentModel": "OpenAI GPT-5 (Codex)",
+    "imageModel": "Adobe Firefly; connector model version not exposed",
+    "fireflyPrompt": "Create a vector-friendly abstract logo mark for a fluid typographic engine and modern magazine article. Combine an open editorial page, a responsive frame that expands from narrow to wide, and three smoothly scaling typographic bars into one memorable geometric symbol. Flat solid fills only, crisp clean edges, generous padding, centered, no words, no letters, no numbers. Palette: deep blue-black #222834, terracotta #B95143, muted slate #768791. Place the isolated mark on a perfectly plain white background with no shadow, no gradient, no texture, no floor, no border.",
+    "researchCitations": [
+      {"label": "fluid typographic engine repository source", "url": "https://github.com/TVW96/fluid-typographic-engine-magazine-article"}
+    ]
+  },
+  {
+    "id": "skateboard-magazine-capstone-2026-07-25",
+    "repository": "skateboard-magazine-capstone",
+    "repositoryUrl": "https://github.com/TVW96/skateboard-magazine-capstone",
+    "date": "2026-07-25",
+    "month": "2026-07",
+    "commitSummary": "Palette tokens, light/dark mode toggle, and editorial heading refinements",
+    "archetype": "Editorial magazine",
+    "palette": ["#121015", "#F6F0E2", "#D7252E", "#8E2DE2"],
+    "image": "assets/2026-07-25/push-editorial.jpg",
+    "format": "JPG",
+    "dimensions": "2304 × 1792",
+    "assetType": "Capstone campaign scene",
+    "fullDescription": "The original capstone campaign image, restored to the archive with its dark editorial palette, red signal color, violet accent, and magazine-led composition.",
+    "creativeRationale": "This was the initial expressive interpretation of the capstone's editorial system, using the project's contrast-heavy palette and magazine hierarchy as the visual foundation.",
+    "generationMethod": "Adobe Firefly text-to-image generation, exported as JPEG. The original detailed generation record predates provenance capture.",
+    "agentModel": "OpenAI GPT-5 (Codex)",
+    "imageModel": "Adobe Firefly; connector model version not exposed",
+    "fireflyPrompt": "The exact Firefly prompt was not captured in the original generation record. This status is preserved rather than reconstructed or fabricated.",
+    "researchCitations": [
+      {"label": "skateboard-magazine-capstone repository", "url": "https://github.com/TVW96/skateboard-magazine-capstone"}
+    ]
+  },
+  {
+    "id": "ai-copiloted-typographic-card-2026-07-25",
+    "repository": "ai-copiloted-typographic-card",
+    "repositoryUrl": "https://github.com/TVW96/ai-copiloted-typographic-card",
+    "date": "2026-07-25",
+    "month": "2026-07",
+    "commitSummary": "Fluid typography, perceptual color, accessibility, and article-card audit",
+    "archetype": "Editorial component",
+    "palette": ["#121015", "#F6F0E2", "#FF2424", "#B000FF"],
+    "image": "assets/2026-07-25/push-logo.png",
+    "format": "PNG",
+    "dimensions": "2048 × 2048",
+    "assetType": "Original transparent capstone mark",
+    "transparent": true,
+    "fullDescription": "The original transparent mark from the first Commit Canvas generation, restored with its fluid-typography, perceptual-color, and accessibility context intact.",
+    "creativeRationale": "The mark translated the initial capstone's typographic and color-system work into a high-contrast symbol suitable for reuse across editorial surfaces.",
+    "generationMethod": "Adobe Firefly image generation followed by Adobe background removal and PNG export with alpha. The original detailed generation record predates provenance capture.",
+    "agentModel": "OpenAI GPT-5 (Codex)",
+    "imageModel": "Adobe Firefly; connector model version not exposed",
+    "fireflyPrompt": "The exact Firefly prompt was not captured in the original generation record. This status is preserved rather than reconstructed or fabricated.",
+    "researchCitations": [
+      {"label": "ai-copiloted-typographic-card repository", "url": "https://github.com/TVW96/ai-copiloted-typographic-card"}
+    ]
   },
   {
     "id": "fluid-typographic-engine-magazine-article-scene-2026-07-24",
@@ -69,7 +152,16 @@
     "image": "assets/2026-07-24/fluid-typographic-engine-magazine-article/fluid-layout-editorial.jpg",
     "format": "JPG",
     "dimensions": "2304 × 1792",
-    "assetType": "Fluid layout campaign scene"
+    "assetType": "Fluid layout campaign scene",
+    "fullDescription": "The first campaign-scene interpretation of the fluid typographic engine, combining responsive reading measure, serif scale, and restrained editorial tokens.",
+    "creativeRationale": "This initial iteration established the project's visual language around calm editorial pacing, material paper, responsive framing, and terracotta emphasis.",
+    "generationMethod": "Adobe Firefly text-to-image generation, exported as JPEG. The original detailed generation record predates provenance capture.",
+    "agentModel": "OpenAI GPT-5 (Codex)",
+    "imageModel": "Adobe Firefly; connector model version not exposed",
+    "fireflyPrompt": "The exact Firefly prompt was not captured in the original generation record. This status is preserved rather than reconstructed or fabricated.",
+    "researchCitations": [
+      {"label": "fluid typographic engine repository source", "url": "https://github.com/TVW96/fluid-typographic-engine-magazine-article"}
+    ]
   },
   {
     "id": "fluid-typographic-engine-magazine-article-mark-2026-07-24",
@@ -84,6 +176,15 @@
     "format": "PNG",
     "dimensions": "2048 × 2048",
     "assetType": "Transparent responsive-frame mark",
-    "transparent": true
+    "transparent": true,
+    "fullDescription": "The first transparent responsive-frame mark created for the fluid typographic engine and preserved as the project's original logo iteration.",
+    "creativeRationale": "The original mark focused on responsive framing and editorial structure, creating a simple emblem that could remain recognizable across changing sizes.",
+    "generationMethod": "Adobe Firefly image generation followed by Adobe background removal and PNG export with alpha. The original detailed generation record predates provenance capture.",
+    "agentModel": "OpenAI GPT-5 (Codex)",
+    "imageModel": "Adobe Firefly; connector model version not exposed",
+    "fireflyPrompt": "The exact Firefly prompt was not captured in the original generation record. This status is preserved rather than reconstructed or fabricated.",
+    "researchCitations": [
+      {"label": "fluid typographic engine repository source", "url": "https://github.com/TVW96/fluid-typographic-engine-magazine-article"}
+    ]
   }
 ]
