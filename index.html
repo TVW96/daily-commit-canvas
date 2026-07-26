@@ -56,16 +56,24 @@
           <strong id="latest-date">—</strong>
         </div>
         <div>
-          <span>Repositories indexed</span>
-          <strong id="repository-count">00</strong>
+          <span>Last successful run</span>
+          <strong id="last-success">—</strong>
         </div>
         <div>
-          <span>Assets on view</span>
-          <strong id="asset-count">00</strong>
+          <span>Next scheduled run</span>
+          <strong id="next-run">—</strong>
+        </div>
+        <div>
+          <span>Run mode</span>
+          <strong id="run-mode">—</strong>
+        </div>
+        <div>
+          <span>Processed</span>
+          <strong id="processed-count">00 repos</strong>
         </div>
         <div class="status">
           <span class="status-dot" aria-hidden="true"></span>
-          Daily generation active
+          <span id="health-status">Checking health…</span>
         </div>
       </section>
 
@@ -83,6 +91,12 @@
             <label>
               <span>Month</span>
               <input id="month-filter" type="month">
+            </label>
+            <label>
+              <span>Repository</span>
+              <select id="repository-filter">
+                <option value="">All repositories</option>
+              </select>
             </label>
             <button id="clear-filters" type="button" disabled>Clear</button>
           </form>

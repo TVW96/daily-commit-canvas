@@ -1,6 +1,7 @@
 const gallery = document.querySelector("#gallery");
 const dateFilter = document.querySelector("#date-filter");
 const monthFilter = document.querySelector("#month-filter");
+const repositoryFilter = document.querySelector("#repository-filter");
 const clearFilters = document.querySelector("#clear-filters");
 const showAll = document.querySelector("#show-all");
 const emptyState = document.querySelector("#empty-state");
@@ -18,6 +19,17 @@ function displayDate(date) {
     year: "numeric",
     timeZone: "America/Los_Angeles",
   }).format(new Date(`${date}T12:00:00-07:00`));
+}
+
+function displayDateTime(value) {
+  return new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    day: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+    timeZone: "America/Los_Angeles",
+    timeZoneName: "short",
+  }).format(new Date(value));
 }
 
 function appendTextElement(parent, tag, text, className) {
@@ -143,6 +155,7 @@ function openModal(entry) {
 function resetFilters() {
   dateFilter.value = "";
   monthFilter.value = "";
+  repositoryFilter.value = "";
   render();
 }
 
@@ -150,7 +163,8 @@ function render() {
   const visibleEntries = entries.filter(
     (entry) =>
       (!dateFilter.value || entry.date === dateFilter.value) &&
-      (!monthFilter.value || entry.month === monthFilter.value),
+      (!monthFilter.value || entry.month === monthFilter.value) &&
+      (!repositoryFilter.value || entry.repository === repositoryFilter.value),
   );
 
   gallery.replaceChildren(
@@ -162,32 +176,57 @@ function render() {
   }`;
   gallery.hidden = visibleEntries.length === 0;
   emptyState.hidden = visibleEntries.length !== 0;
-  clearFilters.disabled = !dateFilter.value && !monthFilter.value;
+  clearFilters.disabled =
+    !dateFilter.value && !monthFilter.value && !repositoryFilter.value;
 }
 
 async function initialize() {
-  const response = await fetch("data/entries.json");
-  if (!response.ok) throw new Error("Could not load gallery data.");
-  entries = await response.json();
+  const [entriesResponse, healthResponse] = await Promise.all([
+    fetch("data/entries.json"),
+    fetch("data/automation-health.json"),
+  ]);
+  if (!entriesResponse.ok) throw new Error("Could not load gallery data.");
+  entries = await entriesResponse.json();
 
   const latestDate = entries.map((entry) => entry.date).sort().reverse()[0];
-  const repositoryCount = new Set(entries.map((entry) => entry.repository)).size;
+  const repositories = [...new Set(entries.map((entry) => entry.repository))].sort();
 
   document.querySelector("#latest-date").textContent = latestDate
     ? displayDate(latestDate)
     : "—";
-  document.querySelector("#repository-count").textContent = String(
-    repositoryCount,
-  ).padStart(2, "0");
-  document.querySelector("#asset-count").textContent = String(entries.length).padStart(
-    2,
-    "0",
-  );
+  repositories.forEach((repository) => {
+    const option = document.createElement("option");
+    option.value = repository;
+    option.textContent = repository;
+    repositoryFilter.append(option);
+  });
+
+  if (healthResponse.ok) {
+    const health = await healthResponse.json();
+    document.querySelector("#last-success").textContent = displayDateTime(
+      health.lastSuccessfulRun,
+    );
+    document.querySelector("#next-run").textContent = displayDateTime(
+      health.nextScheduledRun,
+    );
+    document.querySelector("#run-mode").textContent =
+      health.mode === "fallback" ? "Research fallback" : "GitHub activity";
+    document.querySelector("#processed-count").textContent =
+      `${health.repositoriesProcessed.length.toString().padStart(2, "0")} repos · ${health.actualAssetCount}/${health.expectedAssetCount} assets`;
+    const healthStatus = document.querySelector("#health-status");
+    healthStatus.textContent = health.partialFailure ? "Partial failure" : health.message;
+    healthStatus.title = health.message;
+    document.querySelector(".status").dataset.health = health.status;
+  } else {
+    document.querySelector("#health-status").textContent = "Health data unavailable";
+    document.querySelector(".status").dataset.health = "unknown";
+  }
   render();
 }
 
 dateFilter.addEventListener("input", render);
 monthFilter.addEventListener("input", render);
+repositoryFilter.addEventListener("change", render);
 clearFilters.addEventListener("click", resetFilters);
 showAll.addEventListener("click", resetFilters);
 modalClose.addEventListener("click", () => modal.close());

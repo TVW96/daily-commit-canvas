@@ -150,7 +150,7 @@ h1 em {
 
 .signal-strip {
   display: grid;
-  grid-template-columns: repeat(3, 1fr) minmax(15rem, auto);
+  grid-template-columns: repeat(auto-fit, minmax(clamp(9rem, 14vw, 13rem), 1fr));
   border-block: 1px solid var(--line);
 }
 
@@ -186,12 +186,26 @@ h1 em {
   text-transform: uppercase;
 }
 
+.signal-strip .status span:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .status-dot {
   width: 0.6rem;
   height: 0.6rem;
   border-radius: 50%;
   background: var(--red);
   box-shadow: 0 0 0 0.3rem rgb(226 56 52 / 18%);
+}
+
+.status[data-health="degraded"] .status-dot,
+.status[data-health="unknown"] .status-dot {
+  background: var(--violet);
+}
+
+.status[data-health="failed"] .status-dot {
+  background: var(--red);
 }
 
 .archive {
@@ -235,6 +249,7 @@ h2 {
 }
 
 .filters input,
+.filters select,
 .filters button,
 .empty-state button {
   min-height: 2.75rem;
@@ -246,6 +261,12 @@ h2 {
 
 .filters input {
   padding: 0.65rem 0.8rem;
+  color-scheme: dark;
+}
+
+.filters select {
+  max-width: clamp(11rem, 20vw, 18rem);
+  padding: 0.65rem 2rem 0.65rem 0.8rem;
   color-scheme: dark;
 }
 
@@ -677,19 +698,7 @@ footer a {
   }
 
   .signal-strip {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .signal-strip > div:nth-child(2) {
-    border-right: 0;
-  }
-
-  .signal-strip > div {
-    border-bottom: 1px solid var(--line);
-  }
-
-  .signal-strip > div:nth-last-child(-n + 2) {
-    border-bottom: 0;
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
   }
 }
 
@@ -708,7 +717,7 @@ footer a {
 
   .filters {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .filters button {
@@ -717,6 +726,11 @@ footer a {
 
   .filters input {
     width: 100%;
+  }
+
+  .filters select {
+    width: 100%;
+    max-width: none;
   }
 
   footer {
@@ -739,7 +753,7 @@ footer a {
 
 @media (max-width: 480px) {
   .signal-strip {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .signal-strip > div {

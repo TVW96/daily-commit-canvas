@@ -1,0 +1,15 @@
+{
+  "status": "healthy",
+  "lastSuccessfulRun": "2026-07-26T14:10:59-07:00",
+  "nextScheduledRun": "2026-07-27T04:45:00-07:00",
+  "timezone": "America/Los_Angeles",
+  "mode": "activity",
+  "repositoriesProcessed": [
+    "fluid-typographic-engine-magazine-article",
+    "mangamarketplace-html"
+  ],
+  "expectedAssetCount": 4,
+  "actualAssetCount": 4,
+  "partialFailure": false,
+  "message": "Latest generation and both deployments completed successfully."
+}
