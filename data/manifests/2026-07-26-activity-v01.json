@@ -1,0 +1,278 @@
+{
+  "runId": "2026-07-26-activity-v01",
+  "activityDate": "2026-07-26",
+  "mode": "activity",
+  "repositoryCount": 3,
+  "expectedAssetCount": 6,
+  "actualAssetCount": 6,
+  "status": "published",
+  "note": "Catch-up run for the missed 2026-07-27 04:45 Pacific heartbeat. The archive repository is excluded by GitHub node ID. Existing assets remain immutable; this run only appends versioned files.",
+  "repositories": [
+    {
+      "githubRepositoryNodeId": "R_kgDOTi67VQ",
+      "repository": "TVW96/fluid-typographic-engine-magazine-article",
+      "activityDate": "2026-07-26",
+      "commitShas": [
+        "f744c4f8d24fc262d7975eb63457c40a0efc1efc"
+      ],
+      "commitSetHash": "git:f744c4f8d24fc262d7975eb63457c40a0efc1efc",
+      "revision": 2,
+      "parentRevisionEntryIds": [
+        "fluid-typographic-engine-magazine-article-mark-2026-07-25",
+        "fluid-typographic-engine-magazine-article-scene-2026-07-25"
+      ],
+      "inference": {
+        "topic": "Common Form, a human-curated independent-maker home-goods storefront deployed inside the fluid typography repository",
+        "archetype": "Responsive editorial webstore",
+        "palette": ["#F7F3E9", "#332F28", "#315F49", "#DDE8D9", "#D6AA63", "#3F7BCE"],
+        "designTokens": [
+          "--color-bg: oklch(97% .01 85)",
+          "--color-text: oklch(22% .025 55)",
+          "--color-accent: oklch(38% .09 155)",
+          "--color-soft-accent: oklch(91% .04 145)",
+          "--color-warm: oklch(83% .09 70)",
+          "--color-focus: oklch(59% .17 255)",
+          "--space-9: clamp(6rem, 10vw, 10rem)",
+          "--radius-lg: 1.75rem"
+        ]
+      },
+      "assets": [
+        {
+          "role": "transparent-logo-png",
+          "path": "assets/2026-07-26/fluid-typographic-engine-magazine-article/common-form-mark-v02.png",
+          "versionLabel": "v02",
+          "provenance": {
+            "prompt": "Create a vector-friendly abstract logo mark for Common Form, a human-curated webstore for useful, beautiful objects from independent makers and thoughtful studios, deployed inside a fluid typography magazine project. Merge a calm open arch, the silhouette of a hand-thrown vessel, and one turning-page fold into a single memorable geometric emblem. Flat solid fills only, crisp clean edges, centered with generous padding, no words, no letters, no numbers. Palette: deep forest green #315F49, warm charcoal #332F28, soft sage #DDE8D9, muted ochre #D6AA63. Place the isolated mark on a perfectly plain white background with no shadow, no gradient, no texture, no floor, no border.",
+            "negativePrompt": "text, letters, numbers, watermark, brand logo, photographic lighting, 3D bevel, gradients, shadows, busy background, thin fragile lines, mockup",
+            "agentModel": "OpenAI GPT-5 (Codex)",
+            "imageModel": "Adobe Firefly; connector model version not exposed",
+            "adobeRequestIds": [
+              "d0970ff8-37f3-4ff8-8ba2-8c5ea92cdb9d",
+              "11840f3a-2679-4ffd-90c6-0648b29e5bb5"
+            ]
+          },
+          "status": "published",
+          "attempts": 1,
+          "error": null,
+          "validation": {
+            "format": "passed",
+            "dimensions": "passed",
+            "alphaCoverage": "passed",
+            "brokenLinks": "passed",
+            "promptCompliance": "passed",
+            "duplicateDetection": "passed"
+          },
+          "validationDetails": {
+            "alphaCoverage": "83.21% fully transparent; 0.45% partially transparent; 16.35% opaque",
+            "duplicateDetection": "Closest prior PNG dHash similarity 0.734; threshold 0.85",
+            "visualQuality": "Crisp flat silhouette, generous clear space, no text"
+          }
+        },
+        {
+          "role": "environmental-scene-jpg",
+          "path": "assets/2026-07-26/fluid-typographic-engine-magazine-article/common-form-environment-v02.jpg",
+          "versionLabel": "v02",
+          "provenance": {
+            "prompt": "Create a cinematic widescreen editorial-commerce campaign image for Common Form, a human-curated shop of useful objects for a slower kind of home. Show a quiet daylight Seattle apartment-gallery with rain-softened windows, one sculptural chair, a warm ceramic lamp, a matte black vase, pale linen, and a few independent-maker objects arranged with generous breathing room. Integrate subtle responsive-commerce cues as nested shelf frames, measured spacing, calm filter chips and a clearly visible saved-item state, but no readable interface text. Art direction: tactile product photography, refined contemporary magazine composition, accessible high-contrast focal hierarchy, human curation over algorithmic excess. Palette: warm cream, forest green, sage, charcoal, muted ochre, small cobalt focus accent. No people, no brands, no legible words.",
+            "negativePrompt": "copyrighted designs, brand names, readable text, neon noir, manga books, clutter, excessive products, harsh cyberpunk lighting, logos, watermark",
+            "agentModel": "OpenAI GPT-5 (Codex)",
+            "imageModel": "Adobe Firefly; connector model version not exposed",
+            "adobeRequestIds": ["11149315-fd4b-4169-a9d5-da1d1735875f"]
+          },
+          "status": "published",
+          "attempts": 1,
+          "error": null,
+          "validation": {
+            "format": "passed",
+            "dimensions": "passed",
+            "alphaCoverage": "not-applicable",
+            "brokenLinks": "passed",
+            "promptCompliance": "passed",
+            "duplicateDetection": "passed"
+          },
+          "validationDetails": {
+            "duplicateDetection": "Closest prior JPG dHash similarity 0.500; threshold 0.85",
+            "visualQuality": "Rain-lit Seattle environment, clear hierarchy, materially distinct from prior editorial still lifes",
+            "promptComplianceNote": "Incidental pseudo-controls contain no meaningful words"
+          }
+        }
+      ]
+    },
+    {
+      "githubRepositoryNodeId": "R_kgDOTbUC1A",
+      "repository": "TVW96/mangamarketplace-net",
+      "activityDate": "2026-07-26",
+      "commitShas": [
+        "899e89506dc5dc22db973064a5713083ca80f5c8"
+      ],
+      "commitSetHash": "git:899e89506dc5dc22db973064a5713083ca80f5c8",
+      "revision": 1,
+      "parentRevisionEntryIds": [],
+      "inference": {
+        "topic": "A minimal Next.js manga storefront scaffold with catalog, genre filters, product cards, cart state, and dual Cloudflare/GitHub Pages deployment",
+        "archetype": "Minimal manga marketplace scaffold",
+        "palette": ["#F5F5F5", "#FFFFFF", "#18181B", "#71717A", "#D4D4D8", "#6D5DFB"],
+        "designTokens": [
+          "--background: #f5f5f5",
+          "--foreground: #18181b",
+          "--card: #ffffff",
+          "--card-border: #e4e4e7",
+          "--accent: #27272a",
+          "--accent-soft: #f4f4f5"
+        ]
+      },
+      "assets": [
+        {
+          "role": "transparent-logo-png",
+          "path": "assets/2026-07-26/mangamarketplace-net/mangamarketplace-net-index-mark-v01.png",
+          "versionLabel": "v01",
+          "provenance": {
+            "prompt": "Create a vector-friendly abstract logo mark for Manga Marketplace .net, a minimal neutral Next.js storefront scaffold focused on catalog search, genre filters, product cards, cart state, and reliable static deployment. Combine a circular index ring, two clean manga-page rectangles, and a tiny relay node into one balanced geometric emblem that suggests browse, select, and deploy. Flat solid fills only, crisp edges, medium-weight shapes, centered with generous padding, no words, no letters, no numbers. Palette: near-black #18181B, cool gray #71717A, soft gray #D4D4D8, one electric violet signal #6D5DFB. Place the isolated mark on a perfectly plain white background with no shadow, no gradient, no texture, no floor, no border.",
+            "negativePrompt": "text, letters, numbers, Japanese characters, copyrighted manga character, speech bubble, watermark, photo, 3D, gradients, shadows, busy background, shopping cart icon cliché",
+            "agentModel": "OpenAI GPT-5 (Codex)",
+            "imageModel": "Adobe Firefly; connector model version not exposed",
+            "adobeRequestIds": [
+              "9abecc14-2f5b-4b18-8368-acd8e1517e66",
+              "9d1400ed-59d2-495a-8a12-1ada512bde2e"
+            ]
+          },
+          "status": "published",
+          "attempts": 1,
+          "error": null,
+          "validation": {
+            "format": "passed",
+            "dimensions": "passed",
+            "alphaCoverage": "passed",
+            "brokenLinks": "passed",
+            "promptCompliance": "passed",
+            "duplicateDetection": "passed"
+          },
+          "validationDetails": {
+            "alphaCoverage": "70.73% fully transparent; 0.61% partially transparent; 28.66% opaque",
+            "duplicateDetection": "Closest prior PNG dHash similarity 0.734; threshold 0.85",
+            "visualQuality": "Strong catalog index silhouette and legible relay node"
+          }
+        },
+        {
+          "role": "environmental-scene-jpg",
+          "path": "assets/2026-07-26/mangamarketplace-net/mangamarketplace-net-catalog-scene-v01.jpg",
+          "versionLabel": "v01",
+          "provenance": {
+            "prompt": "Create a widescreen editorial product-system image for Manga Marketplace .net, a minimal neutral storefront foundation for catalog browsing, search, genre filtering, product cards and cart state, recently prepared for resilient static deployment. Show a bright modular digital catalog studio: anonymous unbranded manga volumes organized in a precise four-column grid, removable filter tiles visibly grouped above the collection, a calm search lens object, a cart tray, and a luminous relay path connecting local build, cloud edge, and public page as abstract nodes without logos or text. Clean paper-white and graphite environment with cool gray structure and one electric-violet status signal. Clear focus order, spacious targets, visible selected state, subtle human-in-control recommendation controls. Premium editorial 3D still life, no people, no legible words, no copyrighted characters.",
+            "negativePrompt": "brand logos, readable text, Japanese characters, copyrighted manga art, cyberpunk neon room, messy shelves, dark noir, red gold navy palette, watermark",
+            "agentModel": "OpenAI GPT-5 (Codex)",
+            "imageModel": "Adobe Firefly; connector model version not exposed",
+            "adobeRequestIds": ["3dd60976-1a0e-480a-9913-3b1e3f026b76"]
+          },
+          "status": "published",
+          "attempts": 1,
+          "error": null,
+          "validation": {
+            "format": "passed",
+            "dimensions": "passed",
+            "alphaCoverage": "not-applicable",
+            "brokenLinks": "passed",
+            "promptCompliance": "passed",
+            "duplicateDetection": "passed"
+          },
+          "validationDetails": {
+            "duplicateDetection": "Closest prior JPG dHash similarity 0.547; threshold 0.85",
+            "visualQuality": "Clear four-part catalog, filter controls, search lens, cart tray, and deployment relay"
+          }
+        }
+      ]
+    },
+    {
+      "githubRepositoryNodeId": "R_kgDOTFXRmw",
+      "repository": "TVW96/Manga-Marketplace",
+      "activityDate": "2026-07-26",
+      "commitShas": [
+        "51b9a62169f1d4767da9a9582276e57fc32494cb",
+        "c1d942d23febf831bbf469288ec7d954e04a469c",
+        "28c9437162442e1a5397b5c1086bc9ac0cd05122",
+        "13258075fdb0ab66e1ae3cf5ce04bcfb92a08185",
+        "25d0a17470c9ca2961160e2b5b8c1f1797425e2f",
+        "a435d3c70de468a0a93967e7cf54cf1eee7495b1"
+      ],
+      "commitSetHash": "git:a435d3c70de468a0a93967e7cf54cf1eee7495b1",
+      "revision": 1,
+      "parentRevisionEntryIds": [],
+      "inference": {
+        "topic": "A collector-to-collector marketplace with condition grades, categories, Supabase-backed listings, fallback inventory, and static deployment",
+        "archetype": "Collector manga marketplace",
+        "palette": ["#171717", "#F6F7F9", "#1C3563", "#A73535", "#D6A94B"],
+        "designTokens": [
+          "--ink: #171717",
+          "--muted: #626978",
+          "--paper: #f6f7f9",
+          "--line: #d9dde6",
+          "--navy: #1c3563",
+          "--red: #a73535",
+          "--gold: #d6a94b"
+        ]
+      },
+      "assets": [
+        {
+          "role": "transparent-logo-png",
+          "path": "assets/2026-07-26/manga-marketplace/triune-ledger-mark-v01.png",
+          "versionLabel": "v01",
+          "provenance": {
+            "prompt": "Create a vector-friendly abstract logo mark for Manga-Marketplace, a collector marketplace with listings, condition grades, categories, Supabase-backed inventory and static fallback data. Combine a continuous impossible-triangle-inspired exchange loop, an upright book spine, and a small condition-seal dot into one bold geometric emblem. The loop must be original and simple, not copied from any existing logo. Flat solid fills only, crisp clean edges, centered with generous padding, no words, no letters, no numbers, no characters. Palette: navy #1C3563, oxblood red #A73535, antique gold #D6A94B, ink #171717. Place the isolated mark on a perfectly plain white background with no shadow, no gradient, no texture, no floor, no border.",
+            "negativePrompt": "text, letters, numbers, trademark logo, copyrighted character, sword, photo, 3D chrome, gradient, drop shadow, busy background, shopping cart icon",
+            "agentModel": "OpenAI GPT-5 (Codex)",
+            "imageModel": "Adobe Firefly; connector model version not exposed",
+            "adobeRequestIds": [
+              "50dc7b2d-7890-4394-8ee5-a1585a938b7d",
+              "652f33d0-37cd-49c2-a13b-1dadaea3c7a6"
+            ]
+          },
+          "status": "published",
+          "attempts": 1,
+          "error": null,
+          "validation": {
+            "format": "passed",
+            "dimensions": "passed",
+            "alphaCoverage": "passed",
+            "brokenLinks": "passed",
+            "promptCompliance": "passed",
+            "duplicateDetection": "passed"
+          },
+          "validationDetails": {
+            "alphaCoverage": "85.89% fully transparent; 0.35% partially transparent; 13.76% opaque",
+            "duplicateDetection": "Closest prior PNG dHash similarity 0.609; threshold 0.85",
+            "visualQuality": "Original triangular exchange loop with robust card-scale silhouette",
+            "promptComplianceNote": "Core navy/red/gold direction is present; Firefly introduced brighter secondary hues"
+          }
+        },
+        {
+          "role": "environmental-scene-jpg",
+          "path": "assets/2026-07-26/manga-marketplace/collector-exchange-scene-v01.jpg",
+          "versionLabel": "v01",
+          "provenance": {
+            "prompt": "Create a cinematic widescreen campaign scene for Manga-Marketplace, a trustworthy collector-to-collector web marketplace for manga volumes, artbooks and vintage editions. Stage an elegant exchange counter inside a modern archival shop: anonymous unbranded manga volumes in clear protective sleeves, visible condition-grade cards using shapes only, a listing-photo station, category dividers, a sealed parcel, and an abstract inventory ledger flowing from shelf to marketplace card as clean geometric layers. Use navy, oxblood red, antique gold, paper gray and black. Blend Japanese editorial restraint with museum archive lighting and contemporary commerce photography. Make provenance, condition and fallback reliability feel visible; clear focal hierarchy and generous interaction spacing. No people, no brands, no legible text, no copyrighted characters.",
+            "negativePrompt": "Berserk character, copyrighted manga cover, readable Japanese or English text, neon blue-orange noir, casual messy desk, logos, watermark, sword centerpiece",
+            "agentModel": "OpenAI GPT-5 (Codex)",
+            "imageModel": "Adobe Firefly; connector model version not exposed",
+            "adobeRequestIds": ["88129e12-303a-4189-bb64-2d4d1b696763"]
+          },
+          "status": "published",
+          "attempts": 1,
+          "error": null,
+          "validation": {
+            "format": "passed",
+            "dimensions": "passed",
+            "alphaCoverage": "not-applicable",
+            "brokenLinks": "passed",
+            "promptCompliance": "passed",
+            "duplicateDetection": "passed"
+          },
+          "validationDetails": {
+            "duplicateDetection": "Closest prior JPG dHash similarity 0.734; threshold 0.85",
+            "visualQuality": "Distinct museum-archive environment with condition cards, parcel, and inventory ledger",
+            "promptComplianceNote": "Incidental pseudo-labels contain no meaningful words"
+          }
+        }
+      ]
+    }
+  ]
+}
