@@ -1,6 +1,6 @@
 {
   "status": "healthy",
-  "lastSuccessfulRun": "2026-07-27T08:47:40-07:00",
+  "lastSuccessfulRun": "2026-07-27T08:58:33-07:00",
   "nextScheduledRun": "2026-07-28T04:45:00-07:00",
   "timezone": "America/Los_Angeles",
   "mode": "activity",
@@ -14,5 +14,5 @@
   "expectedAssetCount": 6,
   "actualAssetCount": 6,
   "partialFailure": false,
-  "message": "The missed 04:45 Pacific heartbeat was recovered with a complete three-repository catch-up run and six validated assets."
+  "message": "The missed 04:45 Pacific heartbeat was recovered with three repositories, six validated assets, and successful GitHub Pages and private Sites deployments."
 }
